@@ -6,7 +6,7 @@ cache
 .cache
 .temp
 *.local
-readme.md
+readme
 
 # Editor directories and files
 .idea

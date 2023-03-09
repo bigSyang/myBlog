@@ -1,5 +1,5 @@
 import { defineConfig } from "vitepress";
-import { SearchPlugin } from 'vitepress-plugin-search';
+// import { SearchPlugin } from 'vitepress-plugin-search';
 import algolia from './algolia';
 
 export default defineConfig({
@@ -12,19 +12,19 @@ export default defineConfig({
         theme: 'material-theme-ocean',
         lineNumbers: true
     },
-    vite: {
-        plugins: [
-            SearchPlugin({
-                buttonLabel: "Search",
-                placeholder: "Search docs",
-                previewLength: 62,
-                tokenize: 'full',
-                language: 'zh',
-                context: true, // 支持搜索文档内容
-                preset: 'performance'
-              })
-        ]
-    },
+    // vite: {
+    //     plugins: [
+    //         SearchPlugin({
+    //             buttonLabel: "Search",
+    //             placeholder: "Search docs",
+    //             previewLength: 62,
+    //             tokenize: 'full',
+    //             language: 'zh',
+    //             context: true, // 支持搜索文档内容
+    //             preset: 'performance'
+    //           })
+    //     ]
+    // },
 
     themeConfig: {
         logo: '/logo.svg',
