@@ -1,5 +1,6 @@
 import { defineConfig } from "vitepress";
 import { SearchPlugin } from 'vitepress-plugin-search';
+import algolia from './algolia';
 
 export default defineConfig({
     base: '/myBlog/',
@@ -31,13 +32,14 @@ export default defineConfig({
             message: '上海罗盘科技有限公司数据管控平台帮助文档',
             copyright: 'Copyright © 2023-present YSY'
         },
+        algolia,
         // socialLinks: [
         //     { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
         // ],
         nav: [
             { text: '首页', link: '/' },
             // { text: '关于', link: '/about/' },
-            { text: '前端', link: '/front/' },
+            { text: '前端', link: '/front/JS/' },
         ],
         // sidebar: [
         //     {
