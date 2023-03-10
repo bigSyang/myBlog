@@ -7,10 +7,10 @@ export default defineConfig({
     title: 'SY文档',
     lang: 'zh-CN',
     ignoreDeadLinks: true,
-    cleanUrls: true,
+    // cleanUrls: true,
     markdown: {
-        theme: 'material-theme-ocean',
-        lineNumbers: true
+        // theme: 'material-theme-ocean',
+        // lineNumbers: true
     },
     // vite: {
     //     plugins: [
