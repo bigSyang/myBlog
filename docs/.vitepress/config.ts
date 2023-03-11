@@ -1,6 +1,6 @@
 import { defineConfig } from "vitepress";
-// import { SearchPlugin } from 'vitepress-plugin-search';
-import algolia from './algolia';
+import { SearchPlugin } from 'vitepress-plugin-search';
+// import algolia from './algolia';
 
 export default defineConfig({
     base: '/myBlog/',
@@ -12,19 +12,19 @@ export default defineConfig({
         theme: 'material-theme-ocean',
         lineNumbers: true
     },
-    // vite: {
-    //     plugins: [
-    //         SearchPlugin({
-    //             buttonLabel: "Search",
-    //             placeholder: "Search docs",
-    //             previewLength: 62,
-    //             tokenize: 'full',
-    //             language: 'zh',
-    //             context: true, // 支持搜索文档内容
-    //             preset: 'performance'
-    //           })
-    //     ]
-    // },
+    vite: {
+        plugins: [
+            SearchPlugin({
+                buttonLabel: "Search",
+                placeholder: "Search docs",
+                previewLength: 62,
+                tokenize: 'full',
+                language: 'zh',
+                context: true, // 支持搜索文档内容
+                preset: 'performance'
+              })
+        ]
+    },
 
     themeConfig: {
         logo: '/logo.svg',
@@ -32,7 +32,7 @@ export default defineConfig({
             message: '上海罗盘科技有限公司数据管控平台帮助文档',
             copyright: 'Copyright © 2023-present YSY'
         },
-        algolia,
+        // algolia,
         // socialLinks: [
         //     { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
         // ],
