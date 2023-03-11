@@ -1,5 +1,6 @@
 import { defineConfig } from "vitepress";
 import { SearchPlugin } from 'vitepress-plugin-search';
+import flexSearchIndexOptions from "flexsearch";
 // import algolia from './algolia';
 
 export default defineConfig({
@@ -15,6 +16,7 @@ export default defineConfig({
     vite: {
         plugins: [
             SearchPlugin({
+                ...flexSearchIndexOptions,
                 buttonLabel: "Search",
                 placeholder: "Search docs",
                 previewLength: 62,
